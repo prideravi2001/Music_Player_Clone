@@ -1,7 +1,10 @@
 ## Dummy Music Clone App with React18
 
+### Getting started
 - React
-- Tailwind
+- Tailwind Setup
+    - Using Tailwind `https://tailwindcss.com/docs/guides/create-react-app`
+    - Using PostCss & Autoprefix `https://tailwindcss.com/docs/installation/using-postcss`
 - Redux
 - RapidAPI
 - Spotify Authenticator
@@ -34,6 +37,7 @@
 
 - RapidAPI URL - `https://rapidapi.com/DataFanatic/api/spotify-scraper/playground/apiendpoint_680e0d79-c035-44b1-9244-040146cd9b02`
 - SpotifyUserId - `31j4zjb74vxden5sgscarswgyoge`
+
 
 
 
