@@ -9,23 +9,24 @@ const SongBar = ({ song, i, artistId, isPlaying, activeSong, handlePauseClick, h
     <div className="flex-1 flex flex-row justify-between items-center">
       <img
         className="w-20 h-20 rounded-lg"
-        src={artistId ? song?.attributes?.artwork?.url.replace('{w}', '125').replace('{h}', '125') : song?.images?.coverart}
+        src={artistId ? song?.album?.cover_big.replace('{w}', '125').replace('{h}', '125') : song?.artist?.picture_big}
         alt={song?.title}
       />
       <div className="flex-1 flex flex-col justify-center mx-3">
         {!artistId ? (
-          <Link to={`/songs/${song.key}`}>
+          <Link to={`/songs/${song.id}`}>
             <p className="text-xl font-bold text-white">
               {song?.title}
             </p>
           </Link>
         ) : (
           <p className="text-xl font-bold text-white">
-            {song?.attributes?.name}
+            {song?.artist?.name}
           </p>
         )}
         <p className="text-base text-gray-300 mt-1">
-          {artistId ? song?.attributes?.albumName : song?.subtitle}
+          {/* {artistId ? song?.attributes?.albumName : song?.artist?.name} */}
+          {artistId ? song?.title : song?.artist?.name}
         </p>
       </div>
     </div>
